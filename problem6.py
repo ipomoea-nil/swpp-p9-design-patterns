@@ -1,6 +1,10 @@
 def args_printer(func):
     # TODO: fill this code
     # Use `print("func:", func.__name__, "args:", args, "kwargs:", kwargs)` to print arguments.
+    def decorated(*args, **kwargs):
+        print("func:", func.__name__, "args:", args, "kwargs:", kwargs)
+        return func(*args, **kwargs)
+    return decorated
 
 
 @args_printer

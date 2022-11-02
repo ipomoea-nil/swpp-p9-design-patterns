@@ -33,6 +33,11 @@ class Building(A):
 
 def build(cls):
     # TODO: fill this method
+    if issubclass(cls, A):
+        obj = cls()
+        obj.build_floor()
+        obj.build_body()
+        obj.build_ceiling()
 
 
 if __name__ == "__main__":
